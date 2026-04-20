@@ -18,7 +18,8 @@ const bodySans = IBM_Plex_Sans({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://evolution-simulator.local";
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://evolution-simulator-two.vercel.app";
 
 export const metadata: Metadata = {
   title: "Evolution Simulator",
@@ -40,7 +41,7 @@ export default async function RootLayout({
   const cookieHeader = (await headers()).get("cookie") ?? "";
   const initialState = cookieToInitialState(config, cookieHeader);
   const baseAppId =
-    process.env.NEXT_PUBLIC_BASE_APP_ID ?? "dev-local-evolution";
+    process.env.NEXT_PUBLIC_BASE_APP_ID ?? "69e5cb4559efa56c5c549f1c";
 
   return (
     <html lang="en" className={`${display.variable} ${bodySans.variable}`}>
